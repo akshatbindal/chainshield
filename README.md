@@ -2,6 +2,12 @@
 
 Supply disruption planning prototype for Snowflake CoCo CLI Hackathon GCC Edition, Track 5.
 
+Browser demo: https://akshatbindal.github.io/chainshield/
+
+Source: https://github.com/akshatbindal/chainshield
+
+The public browser demo uses synthetic data and a deterministic planner. The native Snowflake app and model inference are separate components documented below.
+
 ## Run the portable preview
 
 Requires Node.js 20 or newer. No npm dependencies or install step.
