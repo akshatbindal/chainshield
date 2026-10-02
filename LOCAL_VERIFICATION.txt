@@ -1,0 +1,22 @@
+ChainShield portable validation
+Date: 2 October 2026
+
+Node.js v24.19.0, Node test runner
+10 tests passed, 0 failed.
+Includes constraints/accounting across 1,200 scenario combinations.
+Includes maximum coverage/minimum cost against an independent exhaustive
+oracle for 80 small fixtures.
+
+Python planner parity
+1,200 scenarios matched across all five strategies.
+
+Demo scenario output
+Seven-day delay: Combined, 150 filled, 0 uncovered, INR 8,400 cost.
+Twelve-day delay: Combined, 150 filled, 0 uncovered, INR 18,000 cost.
+Twelve-day delay / alternate capacity 0: Transfer, 90 filled,
+60 uncovered, INR 7,200 cost, INR 236,000 remaining exposure.
+
+These are local solver checks, not fresh Snowflake query tests.
+Live Snowflake app/data/semantic/audit and AI completion evidence was
+verified separately earlier on 2 October 2026. CoCo authentication and
+recording remain pending. All business data is synthetic.

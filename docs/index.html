@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ChainShield — recovery command center</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header><a class="brand" href="./" aria-label="ChainShield home"><span class="brand-icon">C</span> ChainShield<span class="brand-sub">SUPPLY CHAIN INTELLIGENCE</span></a><span class="mode"><span class="dot"></span> SYNTHETIC BROWSER DEMO</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">DISRUPTION → EVIDENCE → RECOVERY</p><h1>One disruption.<br><span>A defensible recovery plan.</span></h1><p class="intro">Trace the orders at risk. Compare what is feasible.<br>See exactly where each recommendation comes from.</p></div><div class="hero-stamp"><span>SCENARIO DATE</span><strong>02 OCT 2026</strong><p>Pune automotive assembly<br>150 units · 3 customer orders</p></div></section>
+<div class="connection-note">Browser demo with synthetic data. The submission video demonstrates the native Snowflake integration separately. These explanations come from the deterministic planner.</div>
+<div class="workspace">
+<aside class="panel controls"><div class="panel-heading"><span class="eyebrow">01 / SIMULATE</span><h2>Stress the network</h2></div>
+<form id="scenario-form">
+<label for="delay">Primary supplier delay <output id="delay-value">7 days</output></label><input id="delay" name="delay" type="range" min="0" max="14" value="7"><div class="range-caption"><span>On schedule</span><span>14 days</span></div>
+<label for="alternate">Alternate capacity <output id="alternate-value">80 units</output></label><input id="alternate" name="alternate" type="range" min="0" max="80" value="80">
+<label for="transfer">Chennai transfer capacity <output id="transfer-value">60 units</output></label><input id="transfer" name="transfer" type="range" min="0" max="60" value="60">
+<label class="toggle"><span>Alternate supplier qualified</span><input id="approved" type="checkbox" checked></label><label class="toggle"><span>Expedited transport available</span><input id="expedite" type="checkbox" checked></label>
+<button class="primary" id="run" type="submit">Calculate recovery <span>↗</span></button><p class="objective">Maximize on-time units, then minimize incremental spend. Partial fulfilment is allowed.</p>
+</form>
+<div class="presets"><p class="eyebrow">DEMO SCENARIOS</p><button type="button" data-preset="healthy">01 · On schedule</button><button type="button" data-preset="disruption">02 · Seven-day delay</button><button type="button" data-preset="severe">03 · Transport recovery fails</button><button type="button" data-preset="shortage">04 · No alternate capacity</button></div>
+<details class="assumptions"><summary>Model assumptions</summary><p>One component per finished unit. Delivery days include production readiness. Fixed costs, capacities and lead times; no probabilistic forecast. Reserved Chennai stock is excluded. Exposure means uncovered units × order unit value, not realized revenue loss.</p></details>
+</aside>
+<section class="results" aria-label="Recovery results"><div id="status" role="status" aria-live="polite">Calculating…</div>
+<div class="metrics" id="metrics"></div>
+<section class="panel network"><div class="section-title"><div><p class="eyebrow">02 / TRACE</p><h2>Follow the dependency</h2></div><span class="tag">P-101 · VALVE ASSEMBLY</span></div><div id="network"></div></section>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">03 / COMPARE</p><h2>The trade-offs, calculated</h2></div><span class="tag">COST IN INR</span></div><div class="table-wrap"><table><thead><tr><th>Strategy</th><th>On-time units</th><th>Recovery spend</th><th>Value at risk</th><th>Coverage</th></tr></thead><tbody id="strategies"></tbody></table></div></section>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">04 / RECOVER</p><h2 id="plan-title">Recommended allocation</h2></div><button id="export" type="button" class="secondary">Export evidence ↗</button></div><div id="orders" class="order-grid"></div></section>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">05 / VERIFY</p><h2>Why this plan holds</h2></div><span class="tag">DETERMINISTIC EXPLANATION</span></div><div id="explanation" class="explanation"></div><details><summary>Rejected routes and constraints</summary><div id="rejected"></div></details><details><summary>Source records and policies</summary><div id="documents"></div></details></section>
+</section></div>
+<footer>ChainShield / Track 5 prototype <span>Shared definitions. Conserved stock. Traceable decisions.</span></footer>
+</main><script type="module" src="./app.js"></script></body></html>

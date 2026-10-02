@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.snowflake/
+*.pem
+*.key
+connections.toml
+secrets.toml
